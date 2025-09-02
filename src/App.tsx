@@ -1,6 +1,10 @@
 import ListGroup from "./components/ListGroup";
 
-  let items = [
+  
+
+function App() {
+
+let items = [
     "New York",
     "San Francisco",
     "Los Angeles",
@@ -8,9 +12,12 @@ import ListGroup from "./components/ListGroup";
     "Houston",
   ];
 
-function App() {
+const handleSelectItem = (item: string) => {
+  console.log(item);
+};
+
   return <div>
-    <ListGroup items={items} heading="Cities"/>
+    <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
   </div>
 }
 
