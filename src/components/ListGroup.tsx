@@ -3,7 +3,8 @@ import { Fragment } from "react/jsx-runtime";
 
 function ListGroup() {
 
-    const items = ['New York', 'San Francisco', 'Los Angeles', 'Chicago', 'Houston'];
+    let items = ['New York', 'San Francisco', 'Los Angeles', 'Chicago', 'Houston'];
+    items = [];
 
     if (items.length === 0) return <p>There are no items in the list</p>;
     
