@@ -1,11 +1,13 @@
+import type { ReactNode } from "react";
 
 
 interface Props {
-  text: string;
+  // allows passing html as children
+  children: ReactNode;
 }
 
-function App({ text }: Props) {
-  return <div className="alert alert-primary">{text}</div>;
+function App({ children }: Props) {
+  return <div className="alert alert-primary">{children}</div>;
 }
 
 export default App;
