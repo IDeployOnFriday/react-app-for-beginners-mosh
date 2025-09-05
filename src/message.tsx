@@ -1,6 +1,6 @@
 
 // PascalCasing
-function Message() {
+export function Message() {
       // JSX : javascript xml 
     const name = " i deploy on friday";
     if (name){

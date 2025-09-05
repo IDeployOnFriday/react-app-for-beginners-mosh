@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Message from "./message.tsx";
 
 
 
@@ -16,9 +17,7 @@ function App() {
         : null}
     <Button color="secondary" onClick={() => setAlertVisiblity(true)}>Click Me</Button>
     <Button color="primary" onClick={() => setGreetingVisiblity(true)}>Show Me Message</Button>
-      {greetingVisiblity === true ?
-          <p>My Message</p>
-          : null}
+      {greetingVisiblity !== true ? null : <Message/>}
   </div>
 }
 
