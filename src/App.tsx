@@ -12,12 +12,18 @@ function App() {
 
   return <div>
 
-    {alertVisible === true ?
+    {
+        alertVisible === true ?
         <Alert onClose={() => setAlertVisiblity(false)}  >My Alert</Alert>
-        : null}
+        : null
+    }
     <Button color="secondary" onClick={() => setAlertVisiblity(true)}>Click Me</Button>
     <Button color="primary" onClick={() => setGreetingVisiblity(true)}>Show Me Message</Button>
-      {greetingVisiblity !== true ? null : <Message/>}
+      {
+          greetingVisiblity !== true ?
+          null
+          : <Message/>
+      }
   </div>
 }
 
