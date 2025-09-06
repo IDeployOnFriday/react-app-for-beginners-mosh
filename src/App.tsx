@@ -24,6 +24,7 @@ function App() {
           null
           : <Message/>
       }
+      <Button color="secondary" onClick={() => setGreetingVisiblity(false)}>Hide Message</Button>
   </div>
 }
 
