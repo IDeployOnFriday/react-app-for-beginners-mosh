@@ -2,6 +2,7 @@ import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Message from "./message.tsx";
+import {MyForm} from "./form.tsx";
 
 
 
@@ -17,13 +18,14 @@ function App() {
         <Alert onClose={() => setAlertVisiblity(false)}  >My Alert</Alert>
         : null
     }
-    <Button color="secondary" onClick={() => setAlertVisiblity(true)}>Click Me</Button>
+    <Button color="secondary" onClick={() => setAlertVisiblity(true)}>show Alert</Button>
     <Button color="primary" onClick={() => setGreetingVisiblity(!greetingVisiblity)}>Show Me Message</Button>
       {
           greetingVisiblity !== true ?
           null
           : <Message/>
       }
+      <MyForm/>
   </div>
 }
 
