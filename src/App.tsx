@@ -9,7 +9,7 @@ import {MyForm} from "./form.tsx";
 function App() {
 
   const [alertVisible, setAlertVisiblity] = useState(false);
-    const [greetingVisiblity, setGreetingVisiblity] = useState(false);
+    const [inputFormVisiblity, setInputFormVisiblity] = useState(false);
 
   return <div>
 
@@ -19,13 +19,13 @@ function App() {
         : null
     }
     <Button color="secondary" onClick={() => setAlertVisiblity(true)}>show Alert</Button>
-    <Button color="primary" onClick={() => setGreetingVisiblity(!greetingVisiblity)}>Show Me Message</Button>
+    <Button color="primary" onClick={() => setInputFormVisiblity(!inputFormVisiblity)}>Show Input Form</Button>
       {
-          greetingVisiblity !== true ?
-          null
-          : <Message/>
+          inputFormVisiblity !== true ?
+          <Message/>
+          : <MyForm/>
       }
-      <MyForm/>
+
   </div>
 }
 
