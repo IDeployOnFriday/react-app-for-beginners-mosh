@@ -15,10 +15,10 @@ function App() {
 
     {
         alertVisible === true ?
-        <Alert onClose={() => setAlertVisiblity(false)}  >My Alert</Alert>
+        <Alert onClose={() => setAlertVisiblity(!alertVisible)}  >My Alert</Alert>
         : null
     }
-    <Button color="secondary" onClick={() => setAlertVisiblity(true)}>show Alert</Button>
+    <Button color="secondary" onClick={() => setAlertVisiblity(!alertVisible)}>show Alert</Button>
     <Button color="primary" onClick={() => setInputFormVisiblity(!inputFormVisiblity)}>Show Input Form</Button>
       {
           inputFormVisiblity !== true ?
